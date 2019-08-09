@@ -1,7 +1,11 @@
 (ns clide.server
-  )
+  (:require
+   [compojure.api.sweet :as c]
+   [ring.util.http-response :as resp]
+   ))
 
-(defn handler [request]
-  {:status 200
-   :headers {"Content-Type" "text/html"}
-   :body "Hi there"})
+(def handler
+  (c/api
+   (c/GET "/" []
+     :query-params [name :- String]
+     (resp/ok {:message (str "Hi " name)}))))
