@@ -6,9 +6,12 @@
   :dependencies [
                  [org.clojure/clojure "1.10.1"]
                  [functionalbytes/mount-lite "2.1.1"]
+                 [metosin/spec-tools "0.10.0"]
                  [metosin/compojure-api "2.0.0-alpha30"]
                  [clj-time "0.15.2"]
                  [ring "1.7.1"]
+                 [ring/ring-json "0.5.0"]
+                 [cheshire "5.9.0"]
                  ]
   :main ^:skip-aot clide.core
   :target-path "target/%s"
